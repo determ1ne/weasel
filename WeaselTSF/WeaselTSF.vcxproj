@@ -476,6 +476,11 @@
   <ItemGroup>
     <ResourceCompile Include="WeaselTSF.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\resource\en_dark.ico" />
+    <Image Include="..\resource\weasel_dark.ico" />
+    <Image Include="..\resource\zh_dark.ico" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -137,4 +137,15 @@
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\resource\en_dark.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resource\weasel_dark.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resource\zh_dark.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

@@ -509,6 +509,7 @@
     <Image Include="..\resource\half.ico" />
     <Image Include="..\resource\en_dark.ico" />
     <Image Include="..\resource\icon1.ico" />
+    <Image Include="..\resource\weasel_dark.ico" />
     <Image Include="..\resource\zh_dark.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
