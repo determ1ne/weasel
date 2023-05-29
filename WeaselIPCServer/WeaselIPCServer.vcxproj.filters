@@ -24,6 +24,9 @@
     <ClCompile Include="SecurityAttribute.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ThemeNotify.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -39,6 +42,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SecurityAttribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThemeNotify.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

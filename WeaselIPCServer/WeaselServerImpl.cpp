@@ -2,6 +2,7 @@
 #include "WeaselServerImpl.h"
 #include <Windows.h>
 #include <resource.h>
+#include "ThemeNotify.h"
 
 namespace weasel {
 	class PipeServer : public PipeChannel<DWORD, PipeMessage>
@@ -163,6 +164,9 @@ int ServerImpl::Run()
 	pipeThread = std::make_unique<boost::thread>([this, &listener]() {
 		channel->Listen(listener);
 	});
+
+	InitThemeNotifier(this);
+	ReadColorMode();
 
 	CMessageLoop theLoop;
 	_Module.AddMessageLoop(&theLoop);

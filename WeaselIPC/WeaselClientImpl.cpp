@@ -6,8 +6,7 @@ using namespace weasel;
 
 ClientImpl::ClientImpl()
 	: session_id(0),
-	  channel(GetPipeName()),
-	  is_ime(false)
+	  channel(GetPipeName())
 {
 	_InitializeClientInfo();
 }
@@ -46,7 +45,6 @@ void ClientImpl::_InitializeClientInfo()
 	GetModuleFileName(GetCurrentModule(), exe_path, MAX_PATH);
 	path = exe_path;
 	to_lower(path);
-	is_ime = ends_with(path, L".ime");
 }
 
 bool ClientImpl::Connect(ServerLauncher const& launcher)
@@ -186,7 +184,7 @@ bool ClientImpl::_WriteClientInfo()
 {
 	channel << L"action=session\n";
 	channel << L"session.client_app=" << app_name.c_str() << L"\n";
-	channel << L"session.client_type=" << (is_ime ? L"ime" : L"tsf") << L"\n";
+	channel << L"session.client_type=" << L"tsf" << L"\n";
 	channel << L".\n";
 	return true;
 }

@@ -17,6 +17,7 @@ public:
 
 	BOOL Create(HWND hTargetWnd);
 	void Refresh();
+	void ChangeTheme(BOOL isLightMode);
 
 protected:
 	virtual void CustomizeMenu(HMENU hMenu);
@@ -26,5 +27,6 @@ protected:
 	WeaselTrayMode m_mode;
 	std::wstring m_schema_zhung_icon;
 	std::wstring m_schema_ascii_icon;
+	BOOL m_isLightMode;
 };
 

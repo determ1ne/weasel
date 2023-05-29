@@ -56,4 +56,8 @@ void WeaselServerApp::SetupMenuHandlers()
 	m_server.AddMenuHandler(ID_WEASELTRAY_CHECKUPDATE, check_update);
 	m_server.AddMenuHandler(ID_WEASELTRAY_INSTALLDIR, std::bind(explore, dir));
 	m_server.AddMenuHandler(ID_WEASELTRAY_USERCONFIG, std::bind(explore, WeaselUserDataPath()));
+	m_server.AddMenuHandler(ID_WEASELTRAY_SYS_LIGHT_MODE, [&] { tray_icon.ChangeTheme(TRUE); return TRUE; });
+	m_server.AddMenuHandler(ID_WEASELTRAY_SYS_DARK_MODE, [&] { tray_icon.ChangeTheme(FALSE); return TRUE; });
+	m_server.AddMenuHandler(ID_WEASELTRAY_APP_LIGHT_MODE, [] { return TRUE; });
+	m_server.AddMenuHandler(ID_WEASELTRAY_APP_DARK_MODE, [] { return TRUE; });
 }
